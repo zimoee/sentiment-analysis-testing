@@ -62,7 +62,7 @@
             <textarea name="text" rows="5" cols="50">{{ request.form.text }}</textarea><br>
             <input type="submit" value="Analyze">
         </form>
-        {% if subjectivity is not none and polarity is not none %}
+        {% if request.form.text and subjectivity is not none and polarity is not none %}
             <div class="results">
                 <h2>Results:</h2>
                 <p>Subjectivity: {{ subjectivity }}</p>
